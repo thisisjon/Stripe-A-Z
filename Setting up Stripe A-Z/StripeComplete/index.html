@@ -1,0 +1,164 @@
+<!-- Only edit. 1. index.html. 2. purchase1-3.php. 3. config.php. 
+Questions?
+Suggestions?
+Email me, I want to make this tutorial quicker and simpler: thisismint@icloud.com
+-->
+
+  <!-- DONT edit --> 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js"></script>
+  <script src="https://checkout.stripe.com/checkout.js"></script>
+  
+  <!-- Optional. EDIT path and product #id/.class -->
+  <form id="payment-form-Product_1" action="./CustomCharge/chargeProduct_1.php" method="post"></form>  
+  <form id="payment-form-Product_2" action="./CustomCharge/chargeProduct_2.php" method="post"></form>  
+  <form id="payment-form-Product_3" action="./CustomCharge/chargeProduct_3.php" method="post"></form>
+
+  <!-- Optional. Edit your product #id/.class -->
+  <div id="Product_1">Product 1</div>
+  <div id="Product_2">Product 2</div>
+  <div id="Product_3">Product 3</div>
+
+  <script>
+  // Product 1 - same structure
+   $('#Product_1').live('click',function(){
+      var token = function(res){
+        var $input = $('<input type=hidden name=stripeToken />').val(res.id);
+        $('#payment-form-Product_1').append($input);  //CHANGE TO <FORM> ID #xxxxxx
+        $('#payment-form-Product_1').get(0).submit(); //CHANGE TO <FORM> ID #xxxxxx
+
+      };
+
+      StripeCheckout.open({
+        key:         'pk_test_BQokikJOvBiI2HlWgH4olfQ2', //CHANGE TO YOUR TEST/OR LIVE API KEY: https://dashboard.stripe.com/account/apikeys 
+        address:     true,
+        amount:      5100, //DISPLAY CHARGE AMOUNT IN CENTS- //CUSTOMISABLE
+        currency:    'aud', ////CUSTOMISABLE
+        name:        'JustNod.me', //CUSTOMISABLE
+        description: 'Stripe Product 1.', //CUSTOMISABLE
+        panelLabel:  'Checkout',
+        token:       token
+      });
+
+      return false;
+    });
+  </script>
+
+  <script>
+  // Product 2 - same structure
+   $('#Product_2').live('click',function(){
+      var token = function(res){
+        var $input = $('<input type=hidden name=stripeToken />').val(res.id);
+        $('#payment-form-Product_2').append($input);  //CHANGE TO <FORM> ID #xxxxxx
+        $('#payment-form-Product_2').get(0).submit(); //CHANGE TO <FORM> ID #xxxxxx
+
+      };
+
+      StripeCheckout.open({
+        key:         'pk_test_BQokikJOvBiI2HlWgH4olfQ2', //CHANGE TO YOUR TEST/OR LIVE API KEY: https://dashboard.stripe.com/account/apikeys 
+        address:     true,
+        amount:      5200, //DISPLAY CHARGE AMOUNT IN CENTS- //CUSTOMISABLE
+        currency:    'aud', ////CUSTOMISABLE
+        name:        'JustNod.me', //CUSTOMISABLE
+        description: 'Stripe Product 2.', //CUSTOMISABLE
+        panelLabel:  'Checkout',
+        token:       token
+      });
+
+      return false;
+    });
+  </script>
+
+
+  <script>
+  // Product 3 - same structure
+   $('#Product_3').live('click',function(){
+      var token = function(res){
+        var $input = $('<input type=hidden name=stripeToken />').val(res.id);
+        $('#payment-form-Product_3').append($input);  //CHANGE TO <FORM> ID #xxxxxx
+        $('#payment-form-Product_3').get(0).submit(); //CHANGE TO <FORM> ID #xxxxxx
+
+      };
+
+      StripeCheckout.open({
+        key:         'pk_test_BQokikJOvBiI2HlWgH4olfQ2', //CHANGE TO YOUR TEST/OR LIVE API KEY: https://dashboard.stripe.com/account/apikeys 
+        address:     true,
+        amount:      5300, //DISPLAY CHARGE AMOUNT IN CENTS- //CUSTOMISABLE
+        currency:    'aud', ////CUSTOMISABLE
+        name:        'JustNod.me', //CUSTOMISABLE
+        description: 'Stripe Product 3.', //CUSTOMISABLE
+        panelLabel:  'Checkout',
+        token:       token
+      });
+
+      return false;
+    });
+  </script>
+
+
+
+
+<!-- CSS -->
+<style>
+
+/* To create an invisible button use this method. When your text or element is clicked. Stripe will appear.
+Customise Width, Height etc...
+
+HTML
+ie) <div id="YOURPRODUCTDIV"> <div id="YOURTEXT/ELEMENT"> BUY #1 </div> </div>
+
+CSS
+#YOURPRODUCTDIV {
+    width: 100px; 
+    height: 100px; 
+
+    position: absolute;
+    top: 100px;
+    left: 100px;
+}
+
+*/
+
+/* --------------------------------------------------------------
+   STYLING BUTTONS. THIS IS NOT NEEDED TO RUN STRIPE. ONLY FOR DEMO PURPOSES
+-------------------------------------------------------------- */
+
+#Product_1 {
+    width: 100px; 
+    height: 100px; 
+    background: red;
+    color: #000;
+    opacity: 0.8; 
+    margin-left: 15px;
+    padding-right: 50px;
+    float: left;
+    top: 10px;
+}
+
+#Product_2 {
+    width: 100px; 
+    height: 100px; 
+    background: blue;
+    color: #000;
+    opacity: 0.8; 
+    margin-left: 15px;
+    padding-right: 50px;
+    float: left;
+    top: 10px;
+}
+
+#Product_3 {
+    width: 100px; 
+    height: 100px; 
+    background: yellow;
+    color: #000;
+    opacity: 0.8; 
+    margin-left: 15px;
+    padding-right: 50px;
+    float: left;
+    top: 10px;
+}
+
+</style>
+
+
+

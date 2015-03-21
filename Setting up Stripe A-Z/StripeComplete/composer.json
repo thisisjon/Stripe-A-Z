@@ -1,0 +1,12 @@
+{
+    "name": "Jonathan_Milanovic/jonathan_milanovic",
+    "require": {
+        "stripe/stripe-php": "~2.1"
+    },
+    "authors": [
+        {
+            "name": "Jonathan Milanovic",
+            "email": "thisismint@icloud.com"
+        }
+    ]
+}
