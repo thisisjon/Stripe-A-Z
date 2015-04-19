@@ -1,6 +1,8 @@
 # Stripe-A-Z
-Setting up Stripe A-z. Configure Stripe easily. Created for non-backend developers.
-
+Setting up Stripe from A-z. Configure Stripe easily. Created for non-backend developers.
+<p>
 Questions.
+<br>
 Suggestions.
-Email me, I want to make this tutorial quicker and simpler: thisismint@icloud.com
+<br>
+<a href="mailto:thisismint@icloud.com?subject=Hi Jonathan!"> Email me</a>, I want to make this tutorial quicker and simpler.
