@@ -14,17 +14,17 @@ Email me, I want to make this tutorial quicker and simpler: thisismint@icloud.co
   <form id="payment-form-Product_3" action="./CustomCharge/chargeProduct_3.php" method="post"></form>
 
   <!-- Optional. Edit your product #id/.class -->
-  <div id="Product_1">Product 1</div>
-  <div id="Product_2">Product 2</div>
-  <div id="Product_3">Product 3</div>
+  <div onclick="" id="Product_1">Product 1</div>
+  <div onclick="" id="Product_2">Product 2</div>
+  <div onclick="" id="Product_3">Product 3</div> <!-- onclick="" allows Stripe to run on mobile and tablet-->
 
   <script>
   // Product 1 - same structure
    $('#Product_1').live('click',function(){
       var token = function(res){
         var $input = $('<input type=hidden name=stripeToken />').val(res.id);
-        $('#payment-form-Product_1').append($input);  //CHANGE TO <FORM> ID #xxxxxx
-        $('#payment-form-Product_1').get(0).submit(); //CHANGE TO <FORM> ID #xxxxxx
+        $('#payment-form-Product_1').append($input);  //CHANGE TO <FORM ID="xxx..">
+        $('#payment-form-Product_1').get(0).submit(); //CHANGE TO <FORM ID="xxx..">
 
       };
 
@@ -48,8 +48,8 @@ Email me, I want to make this tutorial quicker and simpler: thisismint@icloud.co
    $('#Product_2').live('click',function(){
       var token = function(res){
         var $input = $('<input type=hidden name=stripeToken />').val(res.id);
-        $('#payment-form-Product_2').append($input);  //CHANGE TO <FORM> ID #xxxxxx
-        $('#payment-form-Product_2').get(0).submit(); //CHANGE TO <FORM> ID #xxxxxx
+        $('#payment-form-Product_2').append($input);  //CHANGE TO <FORM ID="xxx..">
+        $('#payment-form-Product_2').get(0).submit(); //CHANGE TO <FORM ID="xxx..">
 
       };
 
@@ -74,8 +74,8 @@ Email me, I want to make this tutorial quicker and simpler: thisismint@icloud.co
    $('#Product_3').live('click',function(){
       var token = function(res){
         var $input = $('<input type=hidden name=stripeToken />').val(res.id);
-        $('#payment-form-Product_3').append($input);  //CHANGE TO <FORM> ID #xxxxxx
-        $('#payment-form-Product_3').get(0).submit(); //CHANGE TO <FORM> ID #xxxxxx
+        $('#payment-form-Product_3').append($input);  //CHANGE TO <FORM ID="xxx..">
+        $('#payment-form-Product_3').get(0).submit(); //CHANGE TO <FORM ID="xxx..">
 
       };
 
