@@ -1,6 +1,6 @@
 <?php
   // ONCE PAYMENT IS SUCCESSFUL REDIRECT TO CUSTOM (PAGE) INDEX.HTML
-  // header("Location: /stripe/paymentsuccess/index.html")
+  // header("Location: /stripe/paymentsuccess/index.html");
   
   require_once('./config.php');
   $token  = $_POST['stripeToken'];
