@@ -1,4 +1,7 @@
 <?php
+  // ONCE PAYMENT IS SUCCESSFUL REDIRECT TO CUSTOM (PAGE) INDEX.HTML :)
+  // header("Location: /stripe/paymentsuccess/index.html");
+
   require_once('./config.php');
 
   $token  = $_POST['stripeToken'];
@@ -14,10 +17,6 @@
       'currency' => 'aud' //CUSTOMISABLE
   ));
 
-  // ONCE PAYMENT IS SUCCESSFUL REDIRECT TO CUSTOM (PAGE) INDEX.HTML
-  // header("Location: /stripe/paymentsuccess/index.html")
-
-  // FOR DEMO PURPOSES. YOU CAN REMOVE THIS ECHO COMMAND LATER.
+  // FOR DEMO PURPOSES. YOU CAN REMOVE THIS ECHO COMMAND LATER. 
   echo '<h1>Successfully charged $51!</h1>';
-
 ?>
