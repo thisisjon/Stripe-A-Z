@@ -13,6 +13,7 @@
       'amount'   => 5200, //'ACTUAL' CHARGE AMOUNT IN CENTS- //CUSTOMISABLE
       'currency' => 'aud' //CUSTOMISABLE
   ));
+  
   // FOR DEMO PURPOSES. YOU CAN REMOVE THIS ECHO COMMAND LATER. 
   echo '<h1>Successfully charged $52!</h1>';
 ?>
