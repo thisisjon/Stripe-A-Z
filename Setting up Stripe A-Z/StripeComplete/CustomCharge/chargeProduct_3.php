@@ -1,8 +1,9 @@
 <?php
+  // ONCE PAYMENT IS SUCCESSFUL REDIRECT TO CUSTOM (PAGE) INDEX.HTML
+  // header("Location: /stripe/paymentsuccess/index.html")
+  
   require_once('./config.php');
-
   $token  = $_POST['stripeToken'];
-
   $customer = \Stripe\Customer::create(array(
       'email' => 'customer@example.com',
       'card'  => $token
@@ -14,10 +15,6 @@
       'currency' => 'aud' //CUSTOMISABLE
   ));
 
-  // ONCE PAYMENT IS SUCCESSFUL REDIRECT TO CUSTOM (PAGE) INDEX.HTML
-  // header("Location: /stripe/paymentsuccess/index.html")
-
   // FOR DEMO PURPOSES. YOU CAN REMOVE THIS ECHO COMMAND LATER.
   echo '<h1>Successfully charged $53!</h1>';
-
 ?>
