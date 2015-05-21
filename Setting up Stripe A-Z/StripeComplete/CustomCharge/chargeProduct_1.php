@@ -3,9 +3,7 @@
   // header("Location: /stripe/paymentsuccess/index.html");
 
   require_once('./config.php');
-
   $token  = $_POST['stripeToken'];
-
   $customer = \Stripe\Customer::create(array(
       'email' => 'customer@example.com',
       'card'  => $token
