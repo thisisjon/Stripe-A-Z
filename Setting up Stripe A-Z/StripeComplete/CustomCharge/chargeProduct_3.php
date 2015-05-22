@@ -3,12 +3,14 @@
   // header("Location: /stripe/paymentsuccess/index.html");
   
   require_once('./config.php');
-  $token  = $_POST['stripeToken'];
-  $customer = \Stripe\Customer::create(array(
-      'email' => 'customer@example.com',
-      'card'  => $token
-  ));
+  $token = $_POST['stripeToken'];
+  $email = $_POST['stripeEmail'];
 
+  $customer = \Stripe\Customer::create(array(
+      'card'  => $token,
+      'email' => $email
+  ));
+  
   $charge = \Stripe\Charge::create(array(
       'customer' => $customer->id,
       'amount'   => 5300, //'ACTUAL' CHARGE AMOUNT IN CENTS- //CUSTOMISABLE
